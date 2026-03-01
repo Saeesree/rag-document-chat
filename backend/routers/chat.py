@@ -26,7 +26,7 @@ async def chat(request: ChatRequest):
             collection_name=request.collection_name,
             query_embedding=query_embedding,
             top_k=5,
-            threshold=0.75
+            threshold=0.3
         )
 
         # 3. Send question + chunks to Gemini

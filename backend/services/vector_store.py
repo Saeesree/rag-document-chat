@@ -1,4 +1,4 @@
-def search(collection_name: str, query_embedding: list[float], top_k: int = 5, threshold: float = 0.3):
+def search(collection_name: str, query_embedding: list[float], top_k: int = 5, threshold: float = 0.35):
     """Search for the most relevant chunks. Filter out weak matches."""
     collection = get_or_create_collection(collection_name)
 

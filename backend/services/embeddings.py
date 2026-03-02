@@ -1,10 +1,19 @@
-from sentence_transformers import SentenceTransformer
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
 
-# Load model once at startup (not per request)
-model = SentenceTransformer("all-MiniLM-L6-v2")
+load_dotenv()
 
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def get_embeddings(texts: list[str]) -> list[list[float]]:
     """Convert a list of text strings into embedding vectors."""
-    embeddings = model.encode(texts, show_progress_bar=True)
-    return embeddings.tolist()
+    embeddings = []
+    for text in texts:
+        result = genai.embed_content(
+            model="models/text-embedding-004",
+            content=text,
+            task_type="retrieval_document"
+        )
+        embeddings.append(result["embedding"])
+    return embeddings

@@ -1,14 +1,35 @@
-# Python
-backend/venv/
-backend/__pycache__/
-backend/*.pyc
-backend/chroma_db/
-backend/.env
 
-# Node
-frontend/node_modules/
-frontend/.next/
-frontend/.env.local
 
-# General
+tmp/
+temp.json
+
+# .env
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+venv310/
+ENV/
+env.bak/
+venv.bak/
+
 .DS_Store
+test.ipynb
+
+temp.py
+temp.csv
+test.py
+
+vector_db/
+notebooks.db
+uploaded_files/

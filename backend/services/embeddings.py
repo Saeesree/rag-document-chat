@@ -11,7 +11,7 @@ def get_embeddings(texts: list[str]) -> list[list[float]]:
     embeddings = []
     for text in texts:
         result = genai.embed_content(
-            model="models/text-embedding-004",
+            model="models/embedding-001",
             content=text,
             task_type="retrieval_document"
         )

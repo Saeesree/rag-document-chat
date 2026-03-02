@@ -1,11 +1,13 @@
 llm:
-  provider: "groq"  # Options: groq, ollama
-  model: "meta-llama/llama-4-scout-17b-16e-instruct"  # Default model for the selected provider
+  provider: "openai"
+  model: "gpt-4o-mini"
+
 
 # Provider-specific configurations
+
 providers:
-  groq:
-    models: ["meta-llama/llama-4-scout-17b-16e-instruct", "llama-3.1-8b-instant"]
+  openai:
+    models: ["gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo"]
   ollama:
     models: ["deepseek-r1:1.5b"]
     host: "http://localhost:11434"

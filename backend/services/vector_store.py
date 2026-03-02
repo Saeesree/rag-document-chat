@@ -36,7 +36,7 @@ def add_documents(collection_name: str, chunks: list[dict], embeddings: list[lis
     return len(ids)
 
 
-def search(collection_name: str, query_embedding: list[float], top_k: int = 5, threshold: float = 0.35):
+def search(collection_name: str, query_embedding: list[float], top_k: int = 5, threshold: float = 0.7):
     """Search for the most relevant chunks. Filter out weak matches."""
     collection = get_or_create_collection(collection_name)
 

@@ -9,6 +9,13 @@ A full-stack application that lets you upload documents and chat with them using
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-orange?style=flat-square)
 
 ---
+## 📸 Screenshots
+
+### Chat Interface
+![Chat Interface](assets/screenshot-chat.png)
+
+### Home Page
+![Files](assets/screenshot-home.png)
 
 ## ✨ Features
 

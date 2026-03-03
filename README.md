@@ -12,10 +12,10 @@ A full-stack application that lets you upload documents and chat with them using
 ## 📸 Screenshots
 
 ### Chat Interface
-![Chat Interface](assets/screenshot-chat.png)
+![Chat Interface](assets/Screenshot-chat.png) 
 
 ### Home Page
-![Files](assets/screenshot-home.png)
+![Files](assets/Screenshot-home.png)
 
 ## ✨ Features
 

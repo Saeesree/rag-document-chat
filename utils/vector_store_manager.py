@@ -169,7 +169,7 @@ class VectorStoreManager:
         notebook_name: str,
         query: str,
         n_results: int = 5,
-        threshold: float = 0.3
+        threshold: float = 0.8
     ) -> List[str]:
         """
         Retrieve relevant documents from a notebook's vector store.
@@ -202,6 +202,7 @@ class VectorStoreManager:
         # Filter results by threshold
         relevant_documents = []
         for i, distance in enumerate(results["distances"][0]):
+            print(f"Document {i}: distance={distance}")
             if distance < threshold:
                 relevant_documents.append(results["documents"][0][i])
         

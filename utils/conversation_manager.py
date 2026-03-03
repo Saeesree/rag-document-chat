@@ -41,7 +41,7 @@ class ConversationManager:
         notebook_name: str,
         query: str,
         n_results: int = 5,
-        threshold: float = 0.3,
+        threshold: float = 0.8,
         provider: Optional[str] = None,
         model_name: Optional[str] = None,
     ) -> str:

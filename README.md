@@ -168,6 +168,3 @@ providers:
 
 ---
 
-## 📄 License
-
-This project is based on [Notebook-RAG](https://github.com/Eng-Elias/notebook_rag) by Eng. Elias, licensed under CC BY-NC-SA 4.0.

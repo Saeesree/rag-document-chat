@@ -95,7 +95,7 @@ def list_files(notebook_name: str):
 @app.post("/api/notebooks/{notebook_name}/upload")
 def upload_file(notebook_name: str, file: UploadFile = File(...)):
     """Upload a file to a notebook."""
-    allowed = [".pdf", ".txt", ".md"]
+    allowed = [".pdf", ".txt", ".md", ".docx"]
     ext = os.path.splitext(file.filename)[1].lower()
     
     if ext not in allowed:

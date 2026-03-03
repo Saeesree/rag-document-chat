@@ -1,7 +1,7 @@
 """
 Document processing utilities for Notebook-RAG application.
 """
-
+import docx
 import os
 from typing import List, Optional, Union
 from pathlib import Path
@@ -115,6 +115,8 @@ class DocumentProcessor:
             return DocumentProcessor.extract_text_from_txt(file_path)
         elif extension == ".md":
             return DocumentProcessor.extract_text_from_md(file_path)
+        elif extension == ".docx":
+            return DocumentProcessor.extract_text_from_docx(file_path)
         else:
             raise ValueError(f"Unsupported file extension: {extension}")
     
@@ -168,3 +170,14 @@ class DocumentProcessor:
         
         # Split text into chunks
         return DocumentProcessor.chunk_text(text, chunk_size, chunk_overlap)
+    
+    @staticmethod
+    def extract_text_from_docx(file_path: Union[str, Path]) -> str:
+        file_path = Path(file_path)
+        if not file_path.exists():
+            raise FileNotFoundError(f"DOCX file not found: {file_path}")
+        try:
+            doc = docx.Document(file_path)
+            return "\n".join([para.text for para in doc.paragraphs])
+        except Exception as e:
+            raise IOError(f"Error reading DOCX file: {e}") from e

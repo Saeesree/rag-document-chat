@@ -186,7 +186,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 {status && <span className="text-xs text-stone-500 bg-stone-100 px-3 py-1 rounded-full">{status}</span>}
-                <input ref={fileInputRef} type="file" accept=".pdf,.txt,.md" className="hidden" onChange={uploadFile} />
+                <input ref={fileInputRef} type="file" accept=".pdf,.txt,.md,.docx" className="hidden" onChange={uploadFile} />
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   disabled={uploading}
